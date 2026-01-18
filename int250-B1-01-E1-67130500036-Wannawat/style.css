@@ -2,6 +2,9 @@ html, body {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /*      Navbar     */
@@ -18,14 +21,25 @@ html, body {
 .gmail-find a {
     text-decoration: none;
     margin: 0;
+    color: #212121;
+}
+.gmail-find a:link,
+.gmail-find a:visited  {
+    color: #212121;
 }
 .gmail {
     font-size: 13px;
     padding: 0 0 0 12px;
 }
+.gmail:hover {
+    text-decoration: underline;
+}
 .find {
     font-size: 13px;
     padding: 0 0 0 12px;
+}
+.find:hover {
+    text-decoration: underline;
 }
 
 .dot-grid {
@@ -37,6 +51,11 @@ html, body {
     display: block;
     max-width: 100%;
     height: auto;
+    cursor: pointer;
+}
+.dot-grid:hover {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
 }
 
 .profile-icon {
@@ -48,10 +67,244 @@ html, body {
     border-radius: 50%;
     background-color: #EC407A;
     margin: 4px 6px 4px 4px;
+    cursor: pointer;
 }
 .profile-icon a {
     display: block;
     line-height: 1;
     color: white;
     text-decoration: none;
+}
+
+/*      Main Contain         */
+.main-contain { 
+    flex: 1;
+}
+
+/*      Logo       */
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+}
+.logo .logo-Google {
+    display: flex;
+    align-items: end;
+    font-size: 45px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.logo .logo-Google h1 {
+    margin: 40px 0 0 0;
+}
+.logo .logo-Google .logo-g-1 {
+    color: #4285F4;
+    font-weight: 600;
+}
+.logo .logo-Google .logo-o-1 {
+    color: #EA4335;
+    font-weight: 600;
+}
+.logo .logo-Google .logo-o-2 {
+    color: #FBBC05;
+    font-weight: 600;
+}
+.logo .logo-Google .logo-g-2 {
+    color: #4285F4;
+    font-weight: 600;
+}
+.logo .logo-Google .logo-l-1 {
+    color: #34A853;
+    font-weight: 600;
+}
+.logo .logo-Google .logo-e-1 {
+    color: #EA4335;
+    font-weight: 600;
+    display: inline-block;
+    transform: rotate(-10deg);
+}
+
+
+/*      Search & Button       */
+
+.two-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.two-element .box-button {
+    padding-top: 6px;
+    margin: auto;
+}
+.two-element .box-button .search-box {
+    width: 680px;
+    height: 50px;
+    border: 1px rgba(0, 0, 0, 0.2) solid;
+    border-radius: 100px 100px 100px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 3px 10px 0px rgba(31, 31, 31, 0.08);
+}
+.two-element .box-button .search-box:hover {
+    box-shadow: 0px 3px 10px 0px rgba(31, 31, 31, 0.2);
+}
+.two-element .box-button .search-box .left {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.two-element .box-button .search-box .left .upload {
+    width: 18px;
+    height: 18px;
+    padding: 0 16px 0 16px;
+}
+.two-element .box-button .search-box .left:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+    cursor: pointer;
+}
+.two-element .box-button .search-box .search-tab {
+    width: 100%;
+    height: 100%;
+    cursor: text;
+}
+.two-element .box-button .search-box .right {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+.two-element .box-button .search-box .right .for-mic-cam {
+    display: flex;
+}
+.two-element .box-button .search-box .right .for-mic-cam .microphone {
+    width: 25px;
+    height: 25px;
+    padding: 0 8px;
+    cursor: pointer;
+}
+.two-element .box-button .search-box .right .for-mic-cam .camera {
+    width: 25px;
+    height: 25px;
+    padding: 0 8px;
+    cursor: pointer;
+}
+.two-element .box-button .search-box .right .for-ai button{
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    border: 0;
+    border-radius: 100px;
+    overflow: hidden;
+    padding: 0 12px 0 10px;
+    margin: 0 10px 0 8px;
+    cursor: pointer;
+}
+.two-element .box-button .search-box .right .for-ai .ai-mode {
+    width: 20px;
+    height: 20px;
+    padding-right: 4px;
+}
+
+.two-element .google-lucky {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 18px;
+}
+.two-element .google-lucky .for-both {
+    height: 70px;
+}
+.two-element .google-lucky .for-both button {
+    color: #3c4043;
+    background-color: #f8f9fa;
+    padding: 8px 16px;
+    border: 1px solid #f8f9fa;
+    border-radius: 8px;
+    margin: 11px 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.two-element .google-lucky .for-both button:hover {
+    border: 1px rgba(0, 0, 0, 0.1) solid;
+}
+
+
+/*      Google offered       */
+
+.google-offered {
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.google-offered .offered-text {
+    margin-bottom: 24px;
+}
+.google-offered .offered-text a {
+    text-decoration: none;
+    color: #1A0DAB;
+}
+.google-offered .offered-text a:hover {
+    text-decoration: underline;
+}
+
+
+/*      Footer       */
+
+/* .footer {
+
+} */
+.footer .footer-grid {
+    display: grid;
+    grid-template-rows: auto auto;
+}
+.footer .footer-grid .footer-above {
+    background-color: #F2F2F2;
+    border-bottom: 1px solid #dadce0;
+    padding: 15px 30px;
+    font-size: 15px;
+}
+.footer .footer-grid .footer-below {
+    background-color: #F2F2F2;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer .footer-grid .footer-below a:link,
+.footer .footer-grid .footer-below a:visited {
+    color: #212121;
+}
+.footer .footer-grid .footer-below .footer-below-left {
+    text-decoration: none;
+}
+.footer .footer-grid .footer-below .footer-below-left a {
+    padding: 15px;
+    font-size: 14px;
+    text-decoration: none;
+}
+.footer .footer-grid .footer-below .footer-below-left a:hover {
+    text-decoration: underline;
+}
+/* .footer .footer-grid .footer-below .footer-below-right {
+
+} */
+.footer .footer-grid .footer-below .footer-below-right a {
+    padding: 15px;
+    font-size: 14px;
+    text-decoration: none;
+}
+.footer .footer-grid .footer-below .footer-below-right a:hover {
+    text-decoration: underline;
 }
