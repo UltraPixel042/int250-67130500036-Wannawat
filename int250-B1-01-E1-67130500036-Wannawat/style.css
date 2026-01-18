@@ -1,0 +1,57 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/*      Navbar     */
+.header {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    width: auto;
+    height: auto;
+    padding: 8px 8px 6px 6px;
+}
+
+.gmail-find a {
+    text-decoration: none;
+    margin: 0;
+}
+.gmail {
+    font-size: 13px;
+    padding: 0 0 0 12px;
+}
+.find {
+    font-size: 13px;
+    padding: 0 0 0 12px;
+}
+
+.dot-grid {
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+}
+.dot-grid a img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.profile-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #EC407A;
+    margin: 4px 6px 4px 4px;
+}
+.profile-icon a {
+    display: block;
+    line-height: 1;
+    color: white;
+    text-decoration: none;
+}
