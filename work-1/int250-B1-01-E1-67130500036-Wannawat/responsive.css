@@ -77,10 +77,3 @@
         display: none;
     }
 }
-
-/*      Max Width : 1024px        */
-
-@media (max-width: 1024px) {}
-
-/*      Max Width : 1440px        */
-@media (max-width: 1440px) {}
