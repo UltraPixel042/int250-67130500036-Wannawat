@@ -136,11 +136,16 @@ html, body {
     padding: 20px;
 }
 .two-element .box-button {
+    width: 60%;
     padding-top: 6px;
-    margin: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .two-element .box-button .search-box {
-    width: 680px;
+    width: 80%;
     height: 50px;
     border: 1px rgba(0, 0, 0, 0.2) solid;
     border-radius: 100px 100px 100px 100px;
