@@ -1,5 +1,5 @@
 /*      Max Width : 768px        */
-@media (max-width: 768px) {
+@media (min-width: 425px) and (max-width: 768px) {
     body, html {
         flex: 1;
         width: 100%;
@@ -63,6 +63,21 @@
         justify-content: space-between;
         align-items: center;
     }
+    
+}
+
+@media (max-width: 425px) {
+    .logo .logo-Google {
+        font-size: 35px;
+    }
+    
+    .two-element .box-button {
+        width: 100%;
+        margin: 0;
+    }
+    .two-element .box-button .search-box {
+        width: 100%;
+    }
     .two-element .box-button .search-box .right .for-ai button {
         width: 40px;
         height: 4   0px;
@@ -76,4 +91,14 @@
     .two-element .box-button .search-box .right .for-ai span {
         display: none;
     }
+
+    .two-element .google-lucky .for-both {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+    .two-element .google-lucky .for-both button{
+        width: 40%;
+    }
+
 }
