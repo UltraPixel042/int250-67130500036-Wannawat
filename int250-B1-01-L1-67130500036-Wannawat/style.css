@@ -100,8 +100,6 @@ section {
 .temperature {
     border-top-color: #008000;
     font-size: 20px;
-    display: flex;
-    justify-content: space-between;
     width: 50%;
 }
 #tmp {
@@ -116,8 +114,6 @@ section {
 .weight {
     border-top-color: #ff7f50;
     font-size: 20px;
-    display: flex;
-    justify-content: space-between;
     width: 50%;
 }
 #wgt {
@@ -132,8 +128,6 @@ section {
 .distance {
     border-top-color: #00ffff;
     font-size: 20px;
-    display: flex;
-    justify-content: space-between;
     width: 50%;
 }
 #dst {
