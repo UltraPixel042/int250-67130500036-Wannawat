@@ -1,11 +1,12 @@
 
 function temperature() {
-    const a = document.getElementById('celsius');
-    let result = a.value
-    
-    const b= (result * 9 / 5) + 32;
-    const c = document.getElementById('fahrenheit');
-    c.value = b;
+    const kilo = document.getElementById('celsius').value;
+    if (kilo === '') {
+        alert('Please enter a weight value');
+        return;
+    }
+    const fahrenheit = (kilo * 9 / 5) + 32;
+    document.getElementById('fahrenheit').value = fahrenheit.toFixed(2)
 }
 
 function weight() {
