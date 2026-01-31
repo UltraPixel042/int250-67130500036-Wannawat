@@ -89,18 +89,41 @@ input, textarea, select {
     color: black;
 }
 
-.icon-input-search {
+#lay > .icon-input-search {
     display: flex;
+    width: 100%;
+    
 }
-.icon-input-search .bi-search {
+#lay > .icon-input-search > .bi-search {
     color: rgba(256, 256, 256, 0.3);
     padding: 10px;
 }
-.icon-input-search .form-control {
+#lay > .icon-input-search > .form-control {
     background-color: rgba(256, 256, 256, 0.1);
     border: 1px solid rgba(256, 256, 256, 0.3);   
 }
-.icon-input-search .form-control::placeholder {
+#lay > .icon-input-search > .form-control::placeholder {
     color: rgba(256, 256, 256, 0.5);
     opacity: 1;
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    #lay{
+        max-width: 100%; 
+        margin-bottom: 15px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+    #lay > .icon-input-search {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    #lay > .icon-input-search > .form-control {
+        width: 100%;
+    }
+    .btn-group {
+        width: 100%;
+    }
 }
