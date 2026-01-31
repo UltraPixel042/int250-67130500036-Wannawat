@@ -1,0 +1,106 @@
+body {
+    background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: white;
+    font-weight: 900;
+    font-family: 'Inter', sans-serif;
+    padding: 20px;
+}
+
+h6 {
+    color: rgba(256, 256, 256, 0.3);
+}
+input, textarea, select {
+    color: rgba(256, 256, 256, 0.5) !important;
+}
+
+.for-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 25px;
+}
+
+
+.form>.input-group {
+    width: auto;
+    background-color: rgba(256, 256, 256, 0.1);
+    overflow: hidden;
+}
+
+.form>.input-group>.input-group-text {
+    background-color: rgba(128, 128, 128, 0);
+    color: rgba(256, 256, 256, 0.7);
+    border-right: 0;
+    padding-right: 10px;
+    border: 1px 0 1px 1px solid rgba(256, 256, 256, 0.2);
+    overflow: hidden;
+}
+
+.form>.input-group>.form-select {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 5px 5px 0;
+    background-color: rgba(128, 128, 128, 0);
+    color: rgba(256, 256, 256, 0.7);
+    border-left: 0;
+    border: 1px 1px 1px solid rgba(256, 256, 256, 0.2);
+}
+
+.form>.input-group>.form-select>option {
+    background-color: rgba(128, 128, 128, 0);
+    color: black;
+}
+
+.card {
+    background-color: rgba(256, 256, 256, 0.1);
+    border: 1px solid rgba(256, 256, 256, 0.2);
+}
+
+.col-md-8 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col-md-8>.bi-plus-circle {
+    color: rgba(256, 256, 256, 0.3);
+    padding: 10px;
+}
+
+.col-md-8>.form-control {
+    background-color: rgba(256, 256, 256, 0.1);
+    border: 1px solid rgba(256, 256, 256, 0.3);
+}
+
+.col-md-8>.form-control::placeholder {
+    color: rgba(256, 256, 256, 0.5);
+    opacity: 1;
+}
+
+.col-md-2 > .form-select {
+    background-color: rgba(256, 256, 256, 0.1);
+    border: 1px solid rgba(256, 256, 256, 0.3);
+    color: rgba(256, 256, 256, 0.3);
+}
+.col-md-2 > .form-select > option{
+    background-color: rgba(128, 128, 128, 0);
+    color: black;
+}
+
+.icon-input-search {
+    display: flex;
+}
+.icon-input-search .bi-search {
+    color: rgba(256, 256, 256, 0.3);
+    padding: 10px;
+}
+.icon-input-search .form-control {
+    background-color: rgba(256, 256, 256, 0.1);
+    border: 1px solid rgba(256, 256, 256, 0.3);   
+}
+.icon-input-search .form-control::placeholder {
+    color: rgba(256, 256, 256, 0.5);
+    opacity: 1;
+}
