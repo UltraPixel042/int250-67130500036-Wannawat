@@ -17,29 +17,13 @@ const myProfile = {
 </script>
 
 <template>
-  <div
-    class="flex items-center justify-center gap-8 min-h-screen bg-linear-to-br from-green-500 to-sky-400"
-  >
-    <ProfileCard 
-      background="./src/assets/background.jpg"
-      :profileimg="myProfile.profileimg"
-      :background="myProfile.background"
-      :name="myProfile.name"
-      :subheading="myProfile.subheading"
-      :followers="myProfile.followers"
-      :following="myProfile.following"
-      :projects="myProfile.projects"
-    />
-    <ProfileCard 
-      background="./src/assets/background.jpg"
-      :profileimg="myProfile.profileimg"
-      :background="myProfile.background"
-      :name="myProfile.name"
-      :subheading="myProfile.subheading"
-      :facebook="myProfile.facebook"
-      :instagram="myProfile.instagram"
-      :linkedin="myProfile.linkedin"
-    />
+  <div class="flex items-center justify-center gap-8 min-h-screen bg-linear-to-br from-green-500 to-sky-400">
+    <ProfileCard :profileimg="myProfile.profileimg" :background="myProfile.background" :name="myProfile.name"
+      :subheading="myProfile.subheading" :followers="myProfile.followers" :following="myProfile.following"
+      :projects="myProfile.projects" />
+    <ProfileCard :profileimg="myProfile.profileimg" :background="myProfile.background" :name="myProfile.name"
+      :subheading="myProfile.subheading" :facebook="myProfile.facebook" :instagram="myProfile.instagram"
+      :linkedin="myProfile.linkedin" />
   </div>
 </template>
 
