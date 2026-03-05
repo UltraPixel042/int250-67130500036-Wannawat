@@ -19,7 +19,7 @@ defineProps([
                 <p class="text-white text-xs">{{ price }}</p>
                 <button
                     class=" border-2 border-[#372e6c] rounded-[10px] px-5 py-2 text-white hover:bg-[#7c3aed] hover:border-[#7c3aed] duration-500">Purchase</button>
-                <a class=" border-b-1 border-[#334155] w-[120%] overflow-hidden"></a>
+                <a class=" border-b border-[#334155] w-[120%] overflow-hidden"></a>
                 <p class="flex items-center gap-3 text-white">
                     <svg fill="#ffffff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px"
