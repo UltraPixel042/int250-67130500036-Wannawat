@@ -34,7 +34,7 @@
 
         <div class="md:flex md:flex-col md:items-start">
             <div class="flex justify-center items-center gap-4 mb-6">
-                <div v-for="item in contacts" :key="item.name">
+                <div v-for="item in contacts" :key="item.alt">
                     <a :href="item.href"><img :src="getImageUrl(item.src)" :alt="item.alt"></a>
                 </div>
             </div>
