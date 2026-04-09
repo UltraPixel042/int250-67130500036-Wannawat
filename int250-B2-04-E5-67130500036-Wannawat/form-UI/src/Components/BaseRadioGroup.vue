@@ -15,7 +15,7 @@ const options = [
 </script>
 
 <template>
-    <div class="md:px-8 text-slate-600 mb-4">
+    <div class="md:px-8 text-slate-600 my-4">
         <div class="flex pb-2">
             <label class="text-sm font-bold">Year Level</label>&nbsp;
             <span class="text-red-500 align-super text-xs">*</span>

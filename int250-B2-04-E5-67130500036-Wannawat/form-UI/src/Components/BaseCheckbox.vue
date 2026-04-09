@@ -12,7 +12,7 @@ const checked = computed({
     get: () => props.modelValue,
     set: (val) => emit('update:modelValue', val)
 })
-</script>
+</script>   
 
 <template>
     <div class="md:px-8 text-slate-600">

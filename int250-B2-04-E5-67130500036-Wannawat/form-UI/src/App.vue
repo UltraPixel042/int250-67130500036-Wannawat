@@ -54,7 +54,7 @@ const errors = computed(() => {
 
   if (!form.studentId.trim()) {
     e.studentId = "Student ID is required.";
-  } else if (!/^\d{11}$/.test(form.studentId)) {
+  } else if (!/^\d{11,}$/.test(form.studentId)) {
     e.studentId = "Student ID must be 11 digits.";
   }
 
@@ -82,9 +82,10 @@ const isFormValid = computed(() => Object.keys(errors.value).length === 0);
 
 function handleSubmit() {
   submitted.value = true;
-  if (!isFormValid.value) return;
+  if (!isFormValid.value) {
+    return;
+  }
   showModal.value = true;
-  handleReset();
 }
 </script>
 
@@ -108,65 +109,37 @@ function handleSubmit() {
         <form @submit.prevent="handleSubmit" class="pb-8">
 
           <!-- Text inputs -->
-          <BaseInput
-            v-model="form"
-            :errors="errors"
-            :submitted="submitted"
-          />
+          <BaseInput :modelValue="form" @update:modelValue="val => Object.assign(form, val)" :errors="errors"
+            :submitted="submitted" />
 
           <!-- Selects -->
           <div class="grid grid-cols-2 gap-0 md:px-8 mt-2">
-            <BaseSelect
-              title="Program / Major"
-              :options="programOptions"
-              :showValue="true"
-              v-model="form.program"
-              :error="errors.program"
-              :submitted="submitted"
-            />
-            <BaseSelect
-              title="Workshop Track"
-              :options="trackOptions"
-              v-model="form.track"
-              :error="errors.track"
-              :submitted="submitted"
-            />
+            <BaseSelect title="Program / Major" :options="programOptions" :showValue="true" v-model="form.program"
+              :error="errors.program" :submitted="submitted" />
+            <BaseSelect title="Workshop Track" :options="trackOptions" v-model="form.track" :error="errors.track"
+              :submitted="submitted" />
           </div>
 
           <!-- Year Level -->
-          <BaseRadioGroup
-            v-model="form.yearLevel"
-            :error="errors.yearLevel"
-            :submitted="submitted"
-          />
+          <BaseRadioGroup v-model="form.yearLevel" :error="errors.yearLevel" :submitted="submitted" />
 
           <!-- Bio -->
-          <BaseTextarea
-            v-model="form.bio"
-          />
+          <BaseTextarea v-model="form.bio" />
 
           <!-- Agree checkbox -->
-          <BaseCheckbox
-            v-model="form.agree"
-            :error="errors.agree"
-            :submitted="submitted"
-          />
+          <BaseCheckbox v-model="form.agree" :error="errors.agree" :submitted="submitted" />
 
           <!-- Actions -->
-          <div class="mx-8 mt-6 flex flex-col items-center justify-start gap-3 border-t border-slate-200 pt-6 sm:flex-row">
+          <div
+            class="mx-8 mt-6 flex flex-col items-center justify-start gap-3 border-t border-slate-200 pt-6 sm:flex-row">
             <p class="text-sm text-slate-500">
               <span class="text-sm text-slate-500">Tip:</span>
               Try submitting with empty fields to test validation feedback.
             </p>
-            <button
-              type="button"
-              @click="handleReset"
-              class="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-600 shadow-sm transition hover:bg-slate-50 active:scale-[0.99] cursor-pointer"
-            >Reset</button>
-            <button
-              type="submit"
-              class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 active:scale-[0.99] cursor-pointer"
-            >Submit Registration</button>
+            <button type="button" @click="handleReset"
+              class="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-600 shadow-sm transition hover:bg-slate-50 active:scale-[0.99] cursor-pointer">Reset</button>
+            <button type="submit"
+              class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 active:scale-[0.99] cursor-pointer">Submit Registration</button>
           </div>
 
         </form>
@@ -176,15 +149,18 @@ function handleSubmit() {
 
   <!-- Success Modal -->
   <div v-if="showModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
-    <div class="bg-white rounded-2xl shadow-xl p-8 max-w-sm w-full mx-4 text-center">
-      <div class="flex items-center justify-center w-14 h-14 rounded-full bg-green-100 mx-auto mb-4">
+    <div class="bg-white rounded-2xl shadow-xl p-8 max-w-sm w-full mx-4">
+      <div class="flex items-center justify-center w-14 h-14 rounded-full bg-green-100 mb-4">
         <svg class="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
         </svg>
       </div>
-      <h2 class="text-xl font-bold text-slate-900 mb-2">Registration Submitted!</h2>
-      <p class="text-sm text-slate-500 mb-6">Your registration has been received. We'll see you at the workshop!</p>
-      <button @click="showModal = false" class="w-full rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700 transition">Done</button>
+      <h2 class="text-xl font-bold text-slate-900 mb-2">Registration Submitted</h2>
+      <p class="text-sm text-slate-500 mb-6">Your workshop registration has been recorded successfully.</p>
+      <div class="flex justify-end">
+        <button @click="showModal = false; handleReset()"
+          class="rounded-lg bg-green-600 px-6 py-2 text-sm font-semibold text-white hover:bg-green-700 transition">Close</button>
+      </div>
     </div>
   </div>
 </template>
