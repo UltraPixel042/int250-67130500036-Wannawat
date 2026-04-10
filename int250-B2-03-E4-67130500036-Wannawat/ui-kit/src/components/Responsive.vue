@@ -21,7 +21,7 @@
                 This panel can be reused for quick stats, announcements, or call-to-action content.
               </p>
             </div>
-            <button class="mt-4 border border-white text-white text-sm font-semibold px-4 py-1.5 rounded-md hover:bg-blue-700 w-fit">
+            <button class="mt-4 border border-white text-white text-sm font-semibold px-4 py-1.5 cursor-pointer rounded-md hover:bg-blue-700 w-fit">
               Learn More
             </button>
           </div>

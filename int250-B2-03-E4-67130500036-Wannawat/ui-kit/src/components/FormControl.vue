@@ -49,7 +49,7 @@
 
           <p class="text-sm text-red-500">This is an example of validation/helper text styling.</p>
 
-          <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-6 py-2 rounded-md">
+          <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-6 py-2 rounded-md cursor-pointer">
             Submit Form
           </button>
         </form>

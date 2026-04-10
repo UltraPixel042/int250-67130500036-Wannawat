@@ -14,7 +14,7 @@
               <h3 class="text-base font-bold text-gray-900 mb-1">Basic Card</h3>
               <p class="text-sm text-gray-500">A simple reusable card for general content blocks in a dashboard or landing page.</p>
             </div>
-            <button class="mt-4 border border-gray-300 text-gray-700 text-xs font-medium px-4 py-1.5 rounded-md hover:bg-gray-50 w-fit">
+            <button class="mt-4 border border-gray-300 text-gray-700 text-xs font-medium px-4 py-1.5 rounded-md cursor-pointer hover:bg-gray-50 w-fit">
               View Details
             </button>
           </div>
@@ -29,7 +29,7 @@
               <h3 class="text-base font-bold text-gray-900 mb-1">Student Profile Card</h3>
               <p class="text-sm text-gray-500">A profile summary card showing student status, program, and quick information.</p>
             </div>
-            <button class="mt-4 border border-gray-300 text-gray-700 text-xs font-medium px-4 py-1.5 rounded-md hover:bg-gray-50 w-fit">
+            <button class="mt-4 border border-gray-300 text-gray-700 text-xs font-medium px-4 py-1.5 rounded-md cursor-pointer hover:bg-gray-50 w-fit">
               View Details
             </button>
           </div>
@@ -44,7 +44,7 @@
               <h3 class="text-base font-bold text-gray-900 mb-1">Event Card</h3>
               <p class="text-sm text-gray-500">A reusable event component for workshops, seminars, or hackathon activities.</p>
             </div>
-            <button class="mt-4 border border-gray-300 text-gray-700 text-xs font-medium px-4 py-1.5 rounded-md hover:bg-gray-50 w-fit">
+            <button class="mt-4 border border-gray-300 text-gray-700 text-xs font-medium px-4 py-1.5 rounded-md cursor-pointer hover:bg-gray-50 w-fit">
               View Details
             </button>
           </div>
