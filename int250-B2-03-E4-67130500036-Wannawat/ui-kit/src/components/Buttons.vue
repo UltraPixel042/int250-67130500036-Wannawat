@@ -14,7 +14,7 @@
           <button class="border border-blue-600 text-blue-600 hover:bg-blue-50 text-sm font-semibold px-5 py-2 rounded-md cursor-pointer bg-white">
             Outline Button
           </button>
-          <button class="bg-gray-200 text-gray-400 text-sm font-semibold px-5 py-2 rounded-md cursor-pointer cursor-not-allowed" disabled>
+          <button class="bg-gray-200 text-gray-400 text-sm font-semibold px-5 py-2 rounded-md cursor-not-allowed" disabled>
             Disabled Button
           </button>
         </div>
