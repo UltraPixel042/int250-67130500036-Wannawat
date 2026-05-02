@@ -20,10 +20,10 @@ const courses = ref(mockCourses)
                     <p class="py-1 px-2 rounded-2xl font-bold" :class="course.color">{{ course.status }}</p>
                 </div>
                 
-                <h2 class="py-3 font-bold">{{ course.title  }}</h2>
+                <h2 class="pt-3 font-bold">{{ course.title  }}</h2>
                 <p class="text-slate-500 text-sm py-3">{{ course.desc }}</p>
 
-                <div class="flex flex-col py-3">
+                <div class="flex flex-col pt-3">
                     <div class="flex justify-between items-center">
                         <span class="text-slate-500 text-sm">Progress</span>
                         <span>{{ course.progress }}%</span>
@@ -35,9 +35,9 @@ const courses = ref(mockCourses)
 
                 </div>
 
-                <div class="flex justify-between items-center gap-3 w-[50%]">
-                    <button class="px-4 py-3 rounded-2xl mt-6 bg-indigo-600 text-white text-[15px] cursor-pointer whitespace-nowrap">View Course Details</button>
-                    <button class="px-4 py-3 rounded-2xl mt-6 bg-white border border-slate-200 shadow-sm text-[15px] cursor-pointer whitespace-nowrap">Submit Assignment</button>
+                <div class="flex justify-between items-center gap-3 w-fit h-fit mt-6">
+                    <button class="px-4 py-3 rounded-2xl bg-indigo-600 text-white text-[15px] cursor-pointer whitespace-nowrap">View Course Details</button>
+                    <button class="px-4 py-3 rounded-2xl bg-white border border-slate-200 shadow-sm text-[15px] cursor-pointer whitespace-nowrap">Submit Assignment</button>
                 </div>
 
             </div>
